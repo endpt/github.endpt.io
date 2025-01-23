@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+        body {
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+    <script>
+        // Map of paths to Tana publish URLs
+        const pathMap = {
+            '/r/HGV/pub': 'https://tana.pub/lUkEaTYSGQ8X/public-pitches-on-hgv'
+            // Add more specific mappings as needed
+        };
+
+        // Get the current path
+        const path = window.location.pathname;
+
+        // Check if the path exists in our mapping
+        if (pathMap[path]) {
+            window.history.replaceState(null, '', path);
+            window.location.replace(pathMap[path]);
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
