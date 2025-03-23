@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+    // Check if the requested URL is a PDF
+    if (window.location.pathname.toLowerCase().endsWith('.pdf')) {
+      // Redirect to PDF.js viewer
+      window.location.replace('/pdfjs/web/viewer.html?file=' + 
+                             window.location.pathname + 
+                             '&download=false&print=false');
+    } else {
+      // Regular 404 redirect
+      window.location.replace('/');
+    }
+  </script>
+</head>
+<body>
+  Redirecting...
+</body>
+</html>
