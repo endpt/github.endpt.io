@@ -1,32 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endpoint</title>
     <style>
         body {
-            background-color: white;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 300px;
+            width: 80%;
+            height: auto;
+        }
+        .contact {
+            font-family: Arial, sans-serif;
+            color: #333;
+            font-size: 16px;
         }
     </style>
-    <script>
-        // Map of paths to short-term URLs
-        const pathMap = {
-            '/r/HGV/pub': 'https://'
-            // Add more specific mappings as needed
-        };
-
-        // Get the current path
-        const path = window.location.pathname;
-
-        // Check if the path exists in our mapping
-        if (pathMap[path]) {
-            window.history.replaceState(null, '', path);
-            window.location.replace(pathMap[path]);
-        }
-    </script>
 </head>
 <body>
+    <div class="logo-container">
+        <img src="endpt.png" alt="endpt" class="logo">
+    </div>
+    <div class="contact">
+        inq at endpt dot co
+    </div>
 </body>
 </html>
