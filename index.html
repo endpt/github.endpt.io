@@ -14,29 +14,44 @@
             align-items: center;
             height: 100vh;
             background-color: white;
+            font-family: "ET Book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
         }
         .logo-container {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         .logo {
-            max-width: 300px;
+            max-width: 280px;
             width: 80%;
             height: auto;
         }
         .contact {
-            font-family: Arial, sans-serif;
-            color: #333;
-            font-size: 16px;
+            color: #555;
+            font-size: 15px;
+            letter-spacing: 0.01em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .contact:hover {
+            color: #111;
         }
     </style>
 </head>
 <body>
     <div class="logo-container">
-        <img src="endpt.png" alt="endpt" class="logo">
+        <img src="endpt.png" alt="Endpoint" class="logo">
     </div>
-    <div class="contact">
-        inq at endpt dot co
+    <div class="contact" id="contact-trigger" onclick="showContactInfo()">
+        inquiries
     </div>
+
+    <script>
+        function showContactInfo() {
+            // Only reveals the email when clicked
+            document.getElementById('contact-trigger').innerHTML = 'inquiries@endpoint.co';
+        }
+    </script>
 </body>
 </html>
