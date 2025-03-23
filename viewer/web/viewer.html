@@ -41,6 +41,25 @@ See https://github.com/adobe-type-tools/cmap-resources
         }
       };
     </script>
+    <script>
+      window.addEventListener('DOMContentLoaded', function() {
+        // Hide download button
+        document.getElementById('download').style.display = 'none';
+        
+        // Prevent keyboard shortcuts
+        window.addEventListener('keydown', function(e) {
+          if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.key === 'p')) {
+            e.preventDefault();
+            return false;
+          }
+        });
+        
+        // Disable right-click
+        document.addEventListener('contextmenu', function(e) {
+          e.preventDefault();
+        });
+      });
+      </script>
 
 <!-- This snippet is used in production (included from viewer.html) -->
 <link rel="resource" type="application/l10n" href="locale/locale.json">
