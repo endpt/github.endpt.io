@@ -1,0 +1,5 @@
+# robots.txt - Block ALL site scraping
+User-agent: *
+Disallow: /
+
+# No exceptions for any bots
