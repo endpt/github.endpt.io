@@ -67,17 +67,6 @@
         document.getElementById('contact-trigger').innerHTML = '<a href="mailto:inq@endpt.co">inq@endpt.co</a>';
     }
     
-    // PDF.js integration - redirect PDF links
-    document.addEventListener('click', function(e) {
-        // Find clicked links that point to PDFs
-        let link = e.target.closest('a');
-        if (link && link.href && link.href.toLowerCase().endsWith('.pdf')) {
-            e.preventDefault();
-            // Redirect to PDF.js viewer
-            window.location = '/pdfjs/web/viewer.html?file=' + 
-                              link.href.substring(link.href.indexOf('/r/')) + 
-                              '&download=false&print=false';
-        }
     });
     </script>
 </body>
